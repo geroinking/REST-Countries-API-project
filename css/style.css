@@ -7,6 +7,7 @@ body {
     padding: 0%;
     margin: 0%;
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
 }
 .header {
     display: flex;
@@ -36,12 +37,13 @@ section {
     margin: 0 2vw 2vh 2vw;
 }
 .input {
-    min-width: 400px;
+    min-width: 350px;
     min-height: 35px;
     border: none;
     box-shadow: 1px 0px 10px 1px grey;
     border-radius: 5px;
     padding-left: 2vw;
+    font-size: 16px;
 }
 .filter {
     padding: 10px 10px;
