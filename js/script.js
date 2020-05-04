@@ -1,18 +1,11 @@
 "use strict";
 let input = document.getElementById('input'),
-  country = document.querySelectorAll('.country'),
-  africa = document.getElementById('Africa'),
-  america = document.getElementById('America'),
-  asia = document.getElementById('Asia'),
-  europe = document.getElementById('Europe'),
-  oceania = document.getElementById('Oceania'),
-  button = document.getElementById('button'),
   filter = document.getElementById('filter');
 
 
 //search by name
-function search(event) {
-  let name = input.value;
+function search(name) {
+  name = input.value;
   fetch(`https://restcountries.eu/rest/v2/name/${name}`)
     .then(function (response) {
       if (response.status !== 200) {
