@@ -15,22 +15,22 @@
     <section>
         <form class="top_form">
             <input form="search" class="input" type="search" name="Search" id="input" placeholder="Search for a country">
-            <select size="1" form="search" class="filter" name="region[]">
+            <select size="1" form="search" id="filter" class="filter" name="region[]">
                 <option class="filters">Filter by Region</option>
-                <option class="filter_point" id="Africa">Africa</option>
-                <option class="filter_point" id="America">America</option>
-                <option class="filter_point" id="Asia">Asia</option>
-                <option class="filter_point" id="Europe">Europe</option>
-                <option class="filter_point" id="Oceania">Oceania</option>
+                <option class="filter_point" value="africa" id="Africa">Africa</option>
+                <option class="filter_point" value="americas" id="America">America</option>
+                <option class="filter_point" value="asia" id="Asia">Asia</option>
+                <option class="filter_point" value="europe" id="Europe">Europe</option>
+                <option class="filter_point" value="oceania" id="Oceania">Oceania</option>
             </select>
         </form>
         <div class="countries">
             <div class="country">
                 <img id="flag" src="img/de.svg" alt="">
                 <span id="name" class="name">Germany</span>
-                <span id="population">Population: 81.770.900</span>
-                <span id="region">Region: Europe</span>
-                <span id="capital">Capital: Berlin</span>
+                <span id="population">Population: <small>81.770.900</small></span>
+                <span id="region">Region: <small>Europe</small></span>
+                <span id="capital">Capital: <small>Berlin</small></span>
             </div>
             <div class="country">
                 <img id="flag" src="img/us.svg" alt="">
