@@ -9,78 +9,108 @@
 </head>
 <body>
     <header class="header">
-        <h3>Where in the world?</h3>
+        <h3>Find your country</h3>
         <button class="toggle_theme dark" id="button-Dark">Dark Mode</button>
         <button class="toggle_theme light" id="button-Light">Light Mode</button>
     </header>
-    <section id="section">
+    <div class="form_wrapper">
         <form class="top_form">
             <input form="search" class="input" type="search" name="Search" id="input" placeholder="Search for a country">
             <select size="1" form="search" id="filter" class="filter" name="region[]">
                 <option class="filters">Filter by Region</option>
-                <option class="filter_point" value="africa" id="Africa">Africa</option>
-                <option class="filter_point" value="americas" id="America">America</option>
-                <option class="filter_point" value="asia" id="Asia">Asia</option>
-                <option class="filter_point" value="europe" id="Europe">Europe</option>
-                <option class="filter_point" value="oceania" id="Oceania">Oceania</option>
+                <option class="filter_point" value="Africa" id="Africa">Africa</option>
+                <option class="filter_point" value="Americas" id="America">America</option>
+                <option class="filter_point" value="Asia" id="Asia">Asia</option>
+                <option class="filter_point" value="Europe" id="Europe">Europe</option>
+                <option class="filter_point" value="Oceania" id="Oceania">Oceania</option>
             </select>
         </form>
+    </div>
+    <section id="section">
+        
         <div class="countries">
+            <!-- <div id="new_card">
+                <button id="button_back">Back</button>
+                <div class="country_wrapper">
+                    <div class="country_flag">
+                        <image class="country_flag_flag" alt="flag" src="img/af.svg">
+                    </div>
+                    <div class="country_info">
+                        <div class="info_deep">
+                            <h1>Belgium</h1>
+                        <span><strong>Native Name: </strong>Belgie</span>
+                        <span><strong>Population: </strong>11.319.511</span>
+                        <span><strong>Region: </strong>Europe</span>
+                        <span><strong>Sub Region: </strong>Western Europe</span>
+                        <span><strong>Capital: </strong>Brussels</span>
+                        <span><strong>Top Level Domain: </strong>.be</span>
+                        <span><strong>Currencies: </strong>Euro</span>
+                        <span><strong>Languages: </strong>Dutch, French, German</span>
+                        </div>
+                        <div class="info_border">
+                            <span><strong>Border Countries: </strong></span>
+                            <a href="#" class="border_link">France</a>
+                            <a href="#" class="border_link">Germany</a>
+                            <a href="#" class="border_link">Netherlands</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div class="country">
-                <img id="flag" src="img/de.svg" alt="">
-                <span id="name" class="name">Germany</span>
-                <span id="population">Population: <small>81.770.900</small></span>
-                <span id="region">Region: <small>Europe</small></span>
-                <span id="capital">Capital: <small>Berlin</small></span>
+                <img  src="img/de.svg" alt="">
+                <span  class="name">Germany</span>
+                <span >Population: 81.770.900</span>
+                <span >Region: Europe</span>
+                <span >Capital: Berlin</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/us.svg" alt="">
-                <span id="name" class="name">United States of America</span>
-                <span id="population">Population: 323.947.000</span>
-                <span id="region">Region: America</span>
-                <span id="capital">Capital: Washington,D.C</span>
+                <img src="img/us.svg" alt="">
+                <span class="name">United States of America</span>
+                <span >Population: 323.947.000</span>
+                <span >Region: America</span>
+                <span >Capital: Washington,D.C</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/br.svg" alt="">
-                <span id="name" class="name">Brazil</span>
-                <span id="population">Population: 206.135.893</span>
-                <span id="region">Region: America</span>
-                <span id="capital">Capital: Brasilia</span>
+                <img  src="img/br.svg" alt="">
+                <span  class="name">Brazil</span>
+                <span >Population: 206.135.893</span>
+                <span >Region: America</span>
+                <span >Capital: Brasilia</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/is.svg" alt="">
-                <span id="name" class="name">Iceland</span>
-                <span id="population">Population: 334.300</span>
-                <span id="region">Region: Europe</span>
-                <span id="capital">Capital: Reykjavik</span>
+                <img  src="img/is.svg" alt="">
+                <span  class="name">Iceland</span>
+                <span >Population: 334.300</span>
+                <span >Region: Europe</span>
+                <span >Capital: Reykjavik</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/af.svg" alt="">
-                <span id="name" class="name">Afghanistan</span>
-                <span id="population">Population: 27.657.145</span>
-                <span id="region">Region: Asia</span>
-                <span id="capital">Capital: Kabul</span>
+                <img  src="img/af.svg" alt="">
+                <span  class="name">Afghanistan</span>
+                <span >Population: 27.657.145</span>
+                <span >Region: Asia</span>
+                <span >Capital: Kabul</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/Aland.svg" alt="">
-                <span id="name" class="name">Aland Island</span>
-                <span id="population">Population: 28.875</span>
-                <span id="region">Region: Europe</span>
-                <span id="capital">Capital: Mariehamn</span>
+                <img  src="img/Aland.svg" alt="">
+                <span  class="name">Aland Island</span>
+                <span >Population: 28.875</span>
+                <span >Region: Europe</span>
+                <span >Capital: Mariehamn</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/al.svg" alt="">
-                <span id="name" class="name">Albania</span>
-                <span id="population">Population: 2.886.026</span>
-                <span id="region">Region: Europe</span>
-                <span id="capital">Capital: Tirana</span>
+                <img  src="img/al.svg" alt="">
+                <span  class="name">Albania</span>
+                <span >Population: 2.886.026</span>
+                <span >Region: Europe</span>
+                <span >Capital: Tirana</span>
             </div>
             <div class="country">
-                <img id="flag" src="img/dz.svg" alt="">
-                <span id="name" class="name">Algeria</span>
-                <span id="population">Population: 40.400.000</span>
-                <span id="region">Region: Africa</span>
-                <span id="capital">Capital: Algieris</span>
+                <img  src="img/dz.svg" alt="">
+                <span  class="name">Algeria</span>
+                <span >Population: 40.400.000</span>
+                <span >Region: Africa</span>
+                <span >Capital: Algieris</span>
             </div>
         </div>
     </section>

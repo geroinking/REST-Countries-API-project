@@ -70,20 +70,20 @@ section {
     justify-content: space-around;
 }
 .country {
-    margin-bottom: 10px;
     width: 275px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: baseline;
-    background-color: rgb(255,255,255);
+    background-color: rgb(236, 235, 235);
     border-radius: 5px;
     padding-left: 10px;
     padding-bottom: 10px;
     transition: transform .5s;
     margin-bottom: 20px;
 }
-.country:hover {
+.country:hover,
+.country:focus {
     transform: scale(1.050);
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -92,6 +92,7 @@ section {
   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 .name {
     font-weight: 600;
@@ -101,4 +102,44 @@ img {
     height: 200px;
     width: 250px;
     margin: 0%;
+}
+.new_card {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100vw;
+}
+
+.country_wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.country_flag_flag {
+    height: 350px;
+    width: 450px;
+}
+
+.country_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info_deep {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#button_back {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10vw;
+    border: 0.5px solid rgba(143, 143, 143, 50%);
+    -webkit-box-shadow: 3px 5px 23px -5px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 3px 5px 23px -5px rgba(0, 0, 0, 0.45);
+    box-shadow: 3px 5px 23px -5px rgba(0, 0, 0, 0.45);
+    margin-bottom: 20px;
 }
