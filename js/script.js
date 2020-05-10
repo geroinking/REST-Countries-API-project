@@ -8,7 +8,7 @@ let input = document.getElementById('input'),
   countries = document.querySelector('.countries'),
   section = document.getElementById('section'),
   topForm = document.querySelector('.top_form');
-let filterCountry;
+
 
 const getData = async function (url) {
 
