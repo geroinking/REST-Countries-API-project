@@ -7,8 +7,13 @@ let input = document.getElementById('input'),
   country = document.querySelectorAll('.country'),
   countries = document.querySelector('.countries'),
   section = document.getElementById('section'),
+<<<<<<< HEAD
   formWrapper = document.querySelector('.form_wrapper'),
   headerWrapper = document.querySelector('.header-wrapper');
+=======
+  topForm = document.querySelector('.top_form');
+
+>>>>>>> a52c290eae94ba70581b1c7b765e92b6ce44eb89
 
 const getData = async function (url) {
 
