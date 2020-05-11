@@ -1,5 +1,5 @@
 "use strict";
-let input = document.getElementById('input'),
+const input = document.getElementById('input'),
   filter = document.getElementById('filter'),
   buttonDark = document.getElementById('button-Dark'),
   buttonLight = document.getElementById('button-Light'),
