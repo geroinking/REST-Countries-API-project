@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 html {
@@ -14,7 +15,9 @@ body {
     color: hsl(209, 26%, 17%);
     background: hsl(0, 0%, 95%);
 }
-
+#logo {
+    height: 25px;
+}
 .header-wrapper {
     padding-top: 0%;
     padding-bottom: 15px;
@@ -243,6 +246,26 @@ img {
     .country_flag_flag {
         height: 200px;
         width: 300px;
+    }
+
+    .header-wrapper {
+        margin-bottom: 50px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    #logo {
+        margin-left: -40px;
+    }
+
+    #wrap {
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .countries {
+        margin-left: 30px;
     }
 
     body {
