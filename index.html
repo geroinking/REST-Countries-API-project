@@ -8,24 +8,27 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <h3>Find your country</h3>
-        <button class="toggle_theme dark" id="button-Dark">Dark Mode</button>
-        <button class="toggle_theme light" id="button-Light">Light Mode</button>
-    </header>
-    <div class="form_wrapper">
-        <form class="top_form">
-            <input form="search" class="input" type="search" name="Search" id="input" placeholder="Search for a country">
-            <select size="1" form="search" id="filter" class="filter" name="region[]">
-                <option class="filters">Filter by Region</option>
-                <option class="filter_point" value="Africa" id="Africa">Africa</option>
-                <option class="filter_point" value="Americas" id="America">America</option>
-                <option class="filter_point" value="Asia" id="Asia">Asia</option>
-                <option class="filter_point" value="Europe" id="Europe">Europe</option>
-                <option class="filter_point" value="Oceania" id="Oceania">Oceania</option>
-            </select>
-        </form>
+    <div class="header-wrapper">
+        <header class="header">
+            <h3>Find your country</h3>
+            <button class="toggle_theme dark" id="button-Dark">Dark Mode</button>
+            <button class="toggle_theme light" id="button-Light">Light Mode</button>
+        </header>
+        <div class="form_wrapper">
+            <form class="top_form">
+                <input form="search" class="input" type="search" name="Search" id="input" placeholder="Search for a country">
+                <select size="1" form="search" id="filter" class="filter" name="region[]">
+                    <option class="filters">Filter by Region</option>
+                    <option class="filter_point" value="Africa" id="Africa">Africa</option>
+                    <option class="filter_point" value="Americas" id="America">America</option>
+                    <option class="filter_point" value="Asia" id="Asia">Asia</option>
+                    <option class="filter_point" value="Europe" id="Europe">Europe</option>
+                    <option class="filter_point" value="Oceania" id="Oceania">Oceania</option>
+                </select>
+            </form>
+        </div>
     </div>
+    
     <section id="section">
         
         <div class="countries">
@@ -56,56 +59,56 @@
                     </div>
                 </div>
             </div> -->
-            <div class="country">
+            <div id="Germany" class="country">
                 <img  src="img/de.svg" alt="">
                 <span  class="name">Germany</span>
                 <span >Population: 81.770.900</span>
                 <span >Region: Europe</span>
                 <span >Capital: Berlin</span>
             </div>
-            <div class="country">
+            <div id="United States of America" class="country">
                 <img src="img/us.svg" alt="">
                 <span class="name">United States of America</span>
                 <span >Population: 323.947.000</span>
                 <span >Region: America</span>
                 <span >Capital: Washington,D.C</span>
             </div>
-            <div class="country">
+            <div id="Brazil" class="country">
                 <img  src="img/br.svg" alt="">
                 <span  class="name">Brazil</span>
                 <span >Population: 206.135.893</span>
                 <span >Region: America</span>
                 <span >Capital: Brasilia</span>
             </div>
-            <div class="country">
+            <div id="Iceland" class="country">
                 <img  src="img/is.svg" alt="">
                 <span  class="name">Iceland</span>
                 <span >Population: 334.300</span>
                 <span >Region: Europe</span>
                 <span >Capital: Reykjavik</span>
             </div>
-            <div class="country">
+            <div id="Afghanistan" class="country">
                 <img  src="img/af.svg" alt="">
                 <span  class="name">Afghanistan</span>
                 <span >Population: 27.657.145</span>
                 <span >Region: Asia</span>
                 <span >Capital: Kabul</span>
             </div>
-            <div class="country">
+            <div id="Aland Island" class="country">
                 <img  src="img/Aland.svg" alt="">
                 <span  class="name">Aland Island</span>
                 <span >Population: 28.875</span>
                 <span >Region: Europe</span>
                 <span >Capital: Mariehamn</span>
             </div>
-            <div class="country">
+            <div id="Albania" class="country">
                 <img  src="img/al.svg" alt="">
                 <span  class="name">Albania</span>
                 <span >Population: 2.886.026</span>
                 <span >Region: Europe</span>
                 <span >Capital: Tirana</span>
             </div>
-            <div class="country">
+            <div id="Algeria" class="country">
                 <img  src="img/dz.svg" alt="">
                 <span  class="name">Algeria</span>
                 <span >Population: 40.400.000</span>
