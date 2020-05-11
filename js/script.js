@@ -11,7 +11,6 @@ const input = document.getElementById('input'),
   headerWrapper = document.querySelector('.header-wrapper'),
   topForm = document.querySelector('.top_form');
 
-
 const getData = async function (url) {
 
   const response = await fetch(url);
@@ -24,35 +23,35 @@ const getData = async function (url) {
 
 };
 
-function goToMain(event) {
+const goToMain = (event) => {
   const newCard = document.getElementById('new_card');
-  formWrapper.style.display = 'block';
   newCard.innerHTML = '';
-}
+  formWrapper.style.display = 'block';
+};
 
 //search by name
-function search(name) {
+const search = (name) => {
   countries.innerHTML = '';
   name = input.value;
   getData(`https://restcountries.eu/rest/v2/name/${name}`)
-    .then(function (data) {
+    .then((data) => {
 
       formWrapper.style.display = 'none';
       data.forEach(renderNewCard);
 
-    }).catch(function (err) {
+    }).catch((err) => {
       console.log('Fetch Error :-S', err);
     });
-}
+};
 
 //sort by region
-function renderCard({
+const renderCard = ({
   name,
   flag,
   population,
   region,
   capital
-}) {
+}) => {
 
   const card = `
             <div id="${name}" class="country">
@@ -65,10 +64,13 @@ function renderCard({
 
 
   countries.insertAdjacentHTML('afterBegin', card);
-}
+};
 
-function renderNewCard(country) { //rendering new card after search; getting country object
-  //TODO get values from currencies, languages, borders arrays
+const renderNewCard = (country) => { //rendering new card after search; getting country object
+
+  const wrap = document.getElementById('wrap');
+  wrap.innerHTML = '';
+
   const {
     flag,
     name,
@@ -80,8 +82,17 @@ function renderNewCard(country) { //rendering new card after search; getting cou
     topLevelDomain,
     currencies,
     languages,
-    borders
   } = country;
+
+  let arrCur = [];
+  let arrLang = [];
+
+  for (let value of currencies) {
+    arrCur.push(value.name);
+  }
+  for (let item of languages) {
+    arrLang.push(item.name);
+  }
 
   const card = `
    <div id="new_card">
@@ -99,73 +110,67 @@ function renderNewCard(country) { //rendering new card after search; getting cou
                         <span><strong>Sub Region: </strong>${subregion}</span>
                         <span><strong>Capital: </strong>${capital}</span>
                         <span><strong>Top Level Domain: </strong>${topLevelDomain}</span>
-                        <span><strong>Currencies: </strong>${name}</span>
-                        <span><strong>Languages: </strong>Dutch, French, German</span>
-                        </div>
-                        <div class="info_border">
-                            <span><strong>Border Countries: </strong></span>
-                            <a href="#" class="border_link">France</a>
-                            <a href="#" class="border_link">Germany</a>
-                            <a href="#" class="border_link">Netherlands</a>
+                        <span><strong>Currencies: </strong>${arrCur}</span>
+                        <span><strong>Languages: </strong>${arrLang}</span>
                         </div>
                     </div>
                 </div>
             </div>
-  `; //TODO: get values from the borders array, and set as links to another countries
+  `;
 
-  section.insertAdjacentHTML('afterbegin', card);
+  wrap.insertAdjacentHTML('afterbegin', card);
   const buttonBack = document.getElementById('button_back');
   buttonBack.addEventListener('click', goToMain);
-}
+};
 
-function renderCardOnclick(event) {
+const renderCardOnclick = (event) => {
   const target = event.target;
   const name = target.closest('.country');
   const countryName = name.id;
   if (countryName) {
     getData(`https://restcountries.eu/rest/v2/name/${countryName}`)
-      .then(function (data) {
-        data.forEach(function (item) {
+      .then((data) => {
+        data.forEach((item) => {
+
+          window.scrollTo(0, 0);
           renderNewCard(item); // passing object with proper name to render
           countries.style.marginTop = '40px';
+
         });
       });
   }
-}
+};
 
-function loadCards() {
+const loadCards = () => {
+
   countries.innerHTML = '';
   let region = event.target.value;
-  getData(`https://restcountries.eu/rest/v2/region/${region}`)
 
-    .then(function (data) {
+  getData(`https://restcountries.eu/rest/v2/region/${region}`)
+    .then((data) => {
       data.forEach(renderCard);
     })
-
-    .catch(function (err) {
+    .catch((err) => {
       console.log('Fetch Error :-S', err);
     });
-}
+};
 
-function changeToLightTheme() {
+const changeToLightTheme = () => {
   buttonLight.style.display = 'none';
   buttonDark.style.display = 'block';
   body.style.color = 'hsl(209, 26%, 17%)';
   headerWrapper.style.backgroundColor = 'hsl(0, 0%, 100%)';
   body.style.backgroundColor = 'hsl(0, 0%, 95%)';
-}
-
-function changeToDarkTheme() {
+};
+const changeToDarkTheme = () => {
   buttonDark.style.display = 'none';
   buttonLight.style.display = 'block';
   body.style.color = 'hsl(0, 0%, 100%)';
   headerWrapper.style.backgroundColor = 'hsl(209, 23%, 22%)';
   body.style.backgroundColor = 'hsl(207, 26%, 17%)';
-}
+};
 
-
-
-function init() {
+const init = () => {
 
   countries.addEventListener('click', renderCardOnclick);
 
@@ -174,10 +179,10 @@ function init() {
   buttonDark.addEventListener('click', changeToDarkTheme);
   buttonLight.addEventListener('click', changeToLightTheme);
 
-  input.addEventListener("keyup", function (event) {
+  input.addEventListener("keyup", (event) => {
     if (event.keyCode === 13) { //search with Enter
       search();
     }
   });
-}
+};
 init();

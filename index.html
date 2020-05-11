@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
-<body>
+<body id="top">
     <div class="header-wrapper">
         <header class="header">
             <h3>Find your country</h3>
@@ -17,7 +17,7 @@
         <div class="form_wrapper">
             <form class="top_form">
                 <input form="search" class="input" type="search" name="Search" id="input" placeholder="Search for a country">
-                <select size="1" form="search" id="filter" class="filter" name="region[]">
+                <select size="1" form="search" id="filter" class="filter">
                     <option class="filters">Filter by Region</option>
                     <option class="filter_point" value="Africa" id="Africa">Africa</option>
                     <option class="filter_point" value="Americas" id="America">America</option>
@@ -30,35 +30,8 @@
     </div>
     
     <section id="section">
-        
+        <div id="wrap"></div>
         <div class="countries">
-            <!-- <div id="new_card">
-                <button id="button_back">Back</button>
-                <div class="country_wrapper">
-                    <div class="country_flag">
-                        <image class="country_flag_flag" alt="flag" src="img/af.svg">
-                    </div>
-                    <div class="country_info">
-                        <div class="info_deep">
-                            <h1>Belgium</h1>
-                        <span><strong>Native Name: </strong>Belgie</span>
-                        <span><strong>Population: </strong>11.319.511</span>
-                        <span><strong>Region: </strong>Europe</span>
-                        <span><strong>Sub Region: </strong>Western Europe</span>
-                        <span><strong>Capital: </strong>Brussels</span>
-                        <span><strong>Top Level Domain: </strong>.be</span>
-                        <span><strong>Currencies: </strong>Euro</span>
-                        <span><strong>Languages: </strong>Dutch, French, German</span>
-                        </div>
-                        <div class="info_border">
-                            <span><strong>Border Countries: </strong></span>
-                            <a href="#" class="border_link">France</a>
-                            <a href="#" class="border_link">Germany</a>
-                            <a href="#" class="border_link">Netherlands</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div id="Germany" class="country">
                 <img  src="img/de.svg" alt="">
                 <span  class="name">Germany</span>
