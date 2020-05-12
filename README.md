@@ -1,5 +1,5 @@
 ﻿# REST-Countries-API-single-page-project
  
- only HTML CSS and vanilla JavaScript
+ pure HTML CSS and JavaScript
 
 API https://restcountries.eu/
