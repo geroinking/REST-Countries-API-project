@@ -8,7 +8,8 @@ buttonLight = document.getElementById('button-Light'),
   countries = document.querySelector('.countries'),
     section = document.getElementById('section'),
 formWrapper = document.querySelector('.form_wrapper'),
-headerWrapper = document.querySelector('.header-wrapper');
+headerWrapper = document.querySelector('.header-wrapper'),
+topForm = document.querySelector('.top_form');
 
 const getData = async function (url) {
 
@@ -109,8 +110,6 @@ const renderNewCard = (country) => { //rendering new card after search; getting 
                         <span><strong>Sub Region: </strong>${subregion}</span>
                         <span><strong>Capital: </strong>${capital}</span>
                         <span><strong>Top Level Domain: </strong>${topLevelDomain}</span>
-                        <span><strong>Currencies: </strong>${arrCur}</span>
-                        <span><strong>Languages: </strong>${arrLang}</span>
                         </div>
                     </div>
                 </div>
@@ -166,6 +165,7 @@ const changeToDarkTheme = () => {
   buttonLight.style.display = 'block';
   body.style.color = 'hsl(0, 0%, 100%)';
   headerWrapper.style.backgroundColor = 'hsl(209, 23%, 22%)';
+  topForm.style.backgroundColor = 'hsl(209, 23%, 22%)';
   body.style.backgroundColor = 'hsl(207, 26%, 17%)';
 };
 
