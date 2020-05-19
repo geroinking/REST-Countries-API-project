@@ -1,7 +1,6 @@
-# REST-Countries-API-single-page-project
- 
+# REST-Countries-API-single-page-project 
  only HTML CSS and vanilla JavaScript
-
+ 
 # Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
@@ -78,3 +77,10 @@ Feedback is always welcome, so if you have any to give on this challenge please 
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+=======
+﻿# REST-Countries-API-single-page-project
+ 
+ pure HTML CSS and JavaScript
+
+API https://restcountries.eu/
+>>>>>>> 275804cc6d9b2ff4afd007809ea3cd011c64f432
